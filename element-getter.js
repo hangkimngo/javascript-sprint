@@ -3,7 +3,7 @@ function getFirstElement(theArray) {
 }
 
 function getLastElement(theArray) {
-    return theArray[-1]
+    return theArray.at(-1)
 }
 
 function getElementByIndex(theArray, index) {

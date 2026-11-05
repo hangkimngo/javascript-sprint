@@ -1,0 +1,11 @@
+function getFirstElement(theArray) {
+    return theArray[0]
+}
+
+function getLastElement(theArray) {
+    return theArray[-1]
+}
+
+function getElementByIndex(theArray, index) {
+    return theArray[index]
+}

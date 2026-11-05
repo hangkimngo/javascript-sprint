@@ -1,2 +1,2 @@
 const homogeneousArray = ["string1", "string2", "string3"]
-const heterogneousArray = ["string", 15, true]
+const heterogeneousArray = ["string", 15, true]

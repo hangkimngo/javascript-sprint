@@ -20,5 +20,3 @@ function printPrettyDate(date) {
     const message = `Today is ${dayName}, ${month} ${Date}, ${year}, and the time is ${hours}:${minutes}:${seconds} ${morning}`
     console.log(message)
 }
-
-printPrettyDate(new Date())

@@ -17,6 +17,6 @@ function printPrettyDate(date) {
     const seconds = String(date.getSeconds()).padStart(2, '0')
 
 
-    const message = `Today is ${dayName}, ${month} ${Date}, ${year}, and the time is ${hours}:${minutes}:${seconds} ${morning}`
+    const message = `Today is ${dayName}, ${month} ${Date}, ${year}, and the time is ${hours}:${minutes}:${seconds} ${morning}.`
     console.log(message)
 }

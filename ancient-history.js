@@ -9,7 +9,7 @@ function classifyDate(date) {
     const today = new Date()
     if (dateDiffInDays(date, today) > 365) {
         return "ancient"
-    } else if (dateDiffInDays(date, today) >= 0 || dateDiffInDays(date, today) <= 365) {
+    } else if (dateDiffInDays(date, today) >= 0 && dateDiffInDays(date, today) <= 365) {
         return "past"
     } else if (dateDiffInDays(date, today) < -365) {
         return "distant future"
@@ -18,4 +18,4 @@ function classifyDate(date) {
     }
 }
 
-
+console.log()

@@ -2,7 +2,7 @@ function printPrettyDate(date) {
     const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const day = date.getDay()
     const dayName = dayNames[day]
-    const Date = String(date.getDate()).padStart(2, '0')
+    const Date = date.getDate()
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     const month = monthNames[date.getMonth()]
     const year = String(date.getFullYear()).padStart(4, '0')

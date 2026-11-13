@@ -8,7 +8,7 @@ const mathObj = {
     },
 
     isOdd(val) {
-        return val % 2 === 1
+        return val % 2 === 1 || val % 2 === -1
     },
 
     isStrictlyPositive(val) {

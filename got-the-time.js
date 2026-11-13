@@ -11,6 +11,8 @@ function printPrettyDate(date) {
     if (hours > 12) {
         morning = "PM"
         hours -= 12
+    } else if (hours == 12) {
+        morning = "PM"
     }
     hours = String(hours).padStart(2, '0')
     const minutes = String(date.getMinutes()).padStart(2, '0')

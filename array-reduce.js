@@ -4,6 +4,9 @@ function getTotalFromShoppingBasket(arr) {
 }
 
 function getAverageAge(arr) {
+    if (arr.length == 0) {
+        return 0
+    }
     const total = arr.reduce((accumulator, object) => accumulator + object.age, 0)
     return total / arr.length
 }

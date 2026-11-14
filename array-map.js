@@ -4,7 +4,7 @@ function convert2DArrayToObjectArray(arr) {
 }
 
 function convertArrayOfObjectsToStrings(arrObj) {
-    const reformattedArr = arrObj.map((object) => Object.entries(object).map(([key, value]) => `${key}:${value}`).join(", "))
+    const reformattedArr = arrObj.map((object) => Object.entries(object).map(([key, value]) => `${key.toLowerCase()}: ${value}`).join(", "))
     return reformattedArr
 }
 

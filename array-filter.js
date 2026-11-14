@@ -1,5 +1,5 @@
 function filterOutOddNumbers(arr) {
-    const oddArr = arr.filter((number) => number % 2 != 0)
+    const oddArr = arr.filter((number) => number % 2 == 0)
     return oddArr
 }
 
@@ -9,7 +9,7 @@ function filterObjectsByNameLength(arrObj, max) {
 }
 
 function compoundFilter(arrObj) {
-    const result = arrObj.filter((object) => object.code.length > 5 && object.category.search("special") && object.price > 50 && object.location != "Underground")
+    const result = arrObj.filter((object) => object.code.length > 5 && !object.category.includes("special") && object.price > 50 && object.location != "Underground")
     return result
 }
 

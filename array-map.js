@@ -4,7 +4,7 @@ function convert2DArrayToObjectArray(arr) {
 }
 
 function convertArrayOfObjectsToStrings(arrObj) {
-    const reformattedArr = arrObj.map((object) => (`Name: ${object.name}, Age: ${object.age}, City: ${object.city}`))
+    const reformattedArr = arrObj.map((object) => Object.entries(object).map(([key, value]) => `${key}:${value}`).join(", "))
     return reformattedArr
 }
 
@@ -23,8 +23,14 @@ const data = [
 console.log(convert2DArrayToObjectArray(data))
 
 const objects = [
-    { name: "Alice", age: 30, city: "New York" },
-    { name: "Bob", age: 25, city: "Los Angeles" },
+    {
+        J: "WtoI",
+        JTwr: "t",
+        VanEsY: "VreHFn",
+        F: "n",
+        HY: "TN",
+        D: "SUlTTh"
+    }
 ]
 
 console.log(convertArrayOfObjectsToStrings(objects))

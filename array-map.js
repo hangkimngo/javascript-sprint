@@ -9,8 +9,7 @@ function convertArrayOfObjectsToStrings(arrObj) {
 }
 
 function concatenateStrings(arrStr, max) {
-    const filteredArrr = arrStr.filter((str) => str.length >= 5)
-    const reformattedArr = filteredArrr.map((str) => (str.length > 5) ? str.substring(0, 5).concat('...') : str)
+    const reformattedArr = arrStr.map((str) => (str.length > max) ? str.substring(0, max).concat('...') : str)
     return reformattedArr
 }
 

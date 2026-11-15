@@ -7,4 +7,4 @@ class Square extends Rectangle {
 }
 
 const rectangle = new Rectangle(5, 3)
-const square = Square(4)
+const square = new Square(4)

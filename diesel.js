@@ -1,5 +1,5 @@
 function calculateFines(jsonArr) {
-    cars = JSON.parse(jsonArr)
+    const cars = JSON.parse(jsonArr)
     const carsFine = []
     let totalFines = 0
     for (const car of cars) {

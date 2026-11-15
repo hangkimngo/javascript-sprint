@@ -7,7 +7,7 @@ export let rectObj = {
     },
 
     perimeter() {
-        return (this.width * this.height) * 2
+        return (this.width + this.height) * 2
     }
 }
 

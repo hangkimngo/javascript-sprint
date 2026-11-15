@@ -1,4 +1,4 @@
-class Triangle {
+export class Triangle {
     constructor(sideA, sideB, sideC) {
         this.sideA = sideA
         this.sideB = sideB
@@ -6,15 +6,15 @@ class Triangle {
     }
 
     area() {
-        this.semiperimeter = 1 / 2 * (this.sideA + this.sideB + this.sideC)
+        this.semiperimeter = this.perimeter() / 2
         return Math.sqrt(this.semiperimeter * (this.semiperimeter - this.sideA) * (this.semiperimeter - this.sideB) * (this.semiperimeter - this.sideC))
     }
 
     perimeter() {
-        return this.semiperimeter * 2
+        return this.sideA + this.sideB + this.sideC
     }
 }
 
-const triangle = new Triangle(3, 4, 5)
+export const triangle = new Triangle(3, 4, 5)
 console.log(triangle.area())
 console.log(triangle.perimeter())

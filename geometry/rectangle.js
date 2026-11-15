@@ -13,4 +13,4 @@ export class Rectangle {
     }
 }
 
-const rectangle = new Rectangle(5, 3)
+export const rectangle = new Rectangle(5, 3)

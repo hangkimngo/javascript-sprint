@@ -10,7 +10,7 @@ function calculateFines(jsonArr) {
         const fuel = car[4]
         let fine = 0
         if (year < 2015 && fuel == "diesel") {
-            fine = 15
+            fine = 10
         }
         if (year < 2000) {
             fine = 20

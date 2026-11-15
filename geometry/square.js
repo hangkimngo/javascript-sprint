@@ -1,3 +1,4 @@
+import { Rectangle } from "./rectangle"
 class Square extends Rectangle {
     constructor(side) {
         super()

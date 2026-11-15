@@ -9,14 +9,22 @@ function calculateFines(jsonArr) {
         const year = car[3]
         const fuel = car[4]
         let fine = 0
-        if (year < 2015 && fuel == "diesel") {
-            fine = 10
-        }
+
         if (year < 2000) {
             fine = 20
+        } else if (year < 2015 && fuel == "diesel") {
+            fine = 10
         }
-        totalFines += fine
-        carsFine.push({ "reg": reg, "year": year, "fuel": fuel, "fine": fine })
+
+        if (fine > 0) {
+            totalFines += fine
+            carsFine.push({
+                reg: reg,
+                year: year,
+                fuel: fuel,
+                fine: fine
+            })
+        }
     }
     const result = {
         "totalFines": totalFines,

@@ -13,4 +13,4 @@ export class Rectangle {
     }
 }
 
-const rectange = new Rectangle(5, 3)
+const rectangle = new Rectangle(5, 3)

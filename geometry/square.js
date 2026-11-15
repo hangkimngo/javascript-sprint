@@ -6,5 +6,5 @@ class Square extends Rectangle {
     }
 }
 
-const rectange = new ectangle(5, 3)
+const rectangle = new Rectangle(5, 3)
 const square = Square(4)

@@ -19,5 +19,5 @@ function getElementsByAttribute(attributeName, attributeVal) {
     if (attributeVal === undefined) {
         return document.querySelectorAll(`[${attributeName}]`)
     }
-    return document.querySelectorAll(`[${attributeName}="{attributeVal}"]`)
+    return document.querySelectorAll(`[${attributeName}="${attributeVal}"]`)
 }

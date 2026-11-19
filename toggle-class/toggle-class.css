@@ -1,0 +1,19 @@
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+#content.highlight {
+    background-color: yellow;
+}
+
+#content {
+    background-color: white;
+}

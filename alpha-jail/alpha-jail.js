@@ -12,7 +12,21 @@ function initialize() {
     let character = null
 
     document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            const characters = document.querySelectorAll('.character')
+
+            characters.forEach(function (item) {
+                item.remove()
+            })
+
+            character = null
+            return
+        }
+
         if (event.key >= 'a' && event.key <= 'z') {
+            if (character !== null) {
+                character.classList.remove('follow')
+            }
             character = document.createElement('div')
             character.classList.add('character', 'follow')
             character.textContent = event.key

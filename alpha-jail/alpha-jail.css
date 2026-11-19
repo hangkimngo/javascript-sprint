@@ -1,3 +1,7 @@
+:root {
+    --orange: var(--orange)
+}
+
 body {
     display: flex;
     margin: 0

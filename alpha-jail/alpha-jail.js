@@ -36,6 +36,7 @@ function initialize() {
         }
 
         if (event.key >= 'a' && event.key <= 'z') {
+
             if (character !== null) {
                 character.classList.remove('follow')
             }
@@ -51,7 +52,6 @@ function initialize() {
             // Check whether the mouse is inside jail
             if (isMouseInsideJail()) {
                 character.classList.add('trapped')
-                character.classList.remove('follow')
             }
 
             document.body.appendChild(character)
@@ -62,24 +62,31 @@ function initialize() {
     document.addEventListener('mousemove', function (event) {
         mouseX = event.clientX
         mouseY = event.clientY
+        if (character === null || !character.classList.contains('follow')) {
+            return
+        }
+        const rect = inside.getBoundingClientRect()
+        const isInside = isMouseInsideJail()
 
-        if (character !== null) {
-            const isInside = isMouseInsideJail()
+        if (isInside) {
+            character.classList.add('trapped')
+            character.style.left = mouseX + 'px'
+            character.style.top = mouseY + 'px'
+        } else if (character.classList.contains('trapped')) {
+            const x = Math.max(rect.left, Math.min(mouseX, rect.right))
+            const y = Math.max(rect.top, Math.min(mouseY, rect.bottom))
 
-            if (isInside) {
-                character.classList.add('trapped')
-                character.style.left = mouseX + 'px'
-                character.style.top = mouseY + 'px'
-            } else if (character.classList.contains('trapped')) {
-                character.classList.remove('follow')
-            } else {
-                character.style.left = mouseX + 'px'
-                character.style.top = mouseY + 'px'
-            }
-
+            character.style.left = x + 'px'
+            character.style.top = y + 'px'
+            character.classList.remove('follow')
+        } else {
+            character.style.left = mouseX + 'px'
+            character.style.top = mouseY + 'px'
         }
 
-    })
+    }
+
+    )
 
 
 }

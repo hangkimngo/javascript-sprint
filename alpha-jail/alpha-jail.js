@@ -51,6 +51,7 @@ function initialize() {
             // Check whether the mouse is inside jail
             if (isMouseInsideJail()) {
                 character.classList.add('trapped')
+                character.classList.remove('follow')
             }
 
             document.body.appendChild(character)

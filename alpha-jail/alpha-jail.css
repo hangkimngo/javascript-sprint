@@ -1,5 +1,5 @@
 :root {
-    --orange: var(--orange)
+    --orange: orange;
 }
 
 body {

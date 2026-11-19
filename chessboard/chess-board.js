@@ -17,11 +17,16 @@ function initializeChessboard() {
             square.id = `square-${row}-${col}`
 
             square.addEventListener("click", function () {
-                if (selectedSquare != null) {
+                if (selectedSquare == square) {
                     selectedSquare.classList.remove('selected')
+                    selectedSquare = null
+                } else {
+                    if (selectedSquare != null) {
+                        selectedSquare.classList.remove('selected')
+                    }
+                    square.classList.add("selected")
+                    selectedSquare = square;
                 }
-                square.classList.add("selected")
-                selectedSquare = square;
             })
 
             chessboard.appendChild(square)

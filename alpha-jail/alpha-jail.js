@@ -67,14 +67,27 @@ function initialize() {
         }
         const rect = inside.getBoundingClientRect()
         const isInside = isMouseInsideJail()
-
+        console.log({
+            isInside,
+            trapped: character.classList.contains('trapped'),
+            follow: character.classList.contains('follow'),
+            mouseX,
+            mouseY,
+            rect
+        })
         if (isInside) {
             character.classList.add('trapped')
             character.style.left = mouseX + 'px'
             character.style.top = mouseY + 'px'
         } else if (character.classList.contains('trapped')) {
-            const x = Math.max(rect.left, Math.min(mouseX, rect.right))
-            const y = Math.max(rect.top, Math.min(mouseY, rect.bottom))
+            const halfWidth = character.offsetWidth / 2
+            const halfHeight = character.offsetHeight / 2
+
+            const x = Math.max(rect.left + halfWidth,
+                Math.min(mouseX, rect.right - halfWidth))
+
+            const y = Math.max(rect.top + halfHeight,
+                Math.min(mouseY, rect.bottom - halfHeight))
 
             character.style.left = x + 'px'
             character.style.top = y + 'px'

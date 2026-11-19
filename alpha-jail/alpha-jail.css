@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    margin: 0
+}
+
+.zone {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+}
+
+.outside {
+    background-color: lightblue;
+}
+
+.inside {
+    background-color: lightcoral;
+}
+
+.character {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    transform: translate(-50%, -50%);
+}
+
+.character.trapped {
+    background-color: var(--orange);
+}

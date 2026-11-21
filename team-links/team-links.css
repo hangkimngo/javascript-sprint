@@ -1,0 +1,10 @@
+.team-links li:hover a {
+    font-weight: bold;
+}
+
+.team-links {
+    list-style: none;
+    padding: 0;
+    margin: 1.5em;
+
+}
